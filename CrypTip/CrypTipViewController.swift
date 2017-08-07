@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CrypTipViewController.swift
 //  CrypTip
 //
 //  Created by jaboukhe on 8/6/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CrypTipViewController: UIViewController {
 
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var partySizeStepper: UIStepper!
     @IBOutlet weak var perPersonTotal: UILabel!
     @IBOutlet weak var QRImage: UIImageView!
+    
+    static let tipPercentages = [0.15, 0.18, 0.2, 0.25]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,9 +59,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func renderQRCode(_ sender: Any) {
-        let tipPercentages = [0.15, 0.18, 0.2, 0.25]
         let bill = Double(billField.text!) ?? 0
-        let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
+        let tip = bill * CrypTipViewController.tipPercentages[tipControl.selectedSegmentIndex]
         let total = bill + tip
         let ppTotal = total / partySizeStepper.value
 
@@ -77,9 +78,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calculateTip(_ sender: Any) {
-        let tipPercentages = [0.15, 0.18, 0.2, 0.25]
         let bill = Double(billField.text!) ?? 0
-        let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
+        let tip = bill * CrypTipViewController.tipPercentages[tipControl.selectedSegmentIndex]
         let total = bill + tip
         let ppTotal = total / partySizeStepper.value
         
@@ -88,8 +88,6 @@ class ViewController: UIViewController {
         perPersonTotal.text = String(format: "$%.2f", ppTotal)
     }
 
-    
-    
     func btcFromUSD(amount: Double) -> Double {
         return amount / 3300.00
     }

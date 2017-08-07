@@ -34,9 +34,8 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func defaultTipChanged(_ sender: Any) {
-        let tipPercentages = [0.15, 0.18, 0.2, 0.25]
         let index = defaultTipControl.selectedSegmentIndex
-        let defaultTipPercentage = tipPercentages[index]
+        let defaultTipPercentage = CrypTipViewController.tipPercentages[index]
         
         UserDefaultsHelper.setTipPercentageDefault(percentage: defaultTipPercentage, index: index)
     }
