@@ -22,7 +22,7 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 * [x] Party size feature that splits the tip based on X people
-* [x] Generate a Bitcoin receive QR code when calculating split
+* [x] Generate a Bitcoin receive QR code when calculating split. This conforms to the [BIP21 standard](https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki) and allows anyone with a Bitcoin wallet or QR scanner to send the CrypTip user Bitcoin in the amount of the split bill. The Bitcoin exchange rate is hardcoded to $3,300 -- I didn't have time to play with fetching and parsing this, but looked into Foundation's JSON parsing support which seemed to do the trick.
 
 ## Video Walkthrough 
 
