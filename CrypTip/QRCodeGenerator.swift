@@ -11,13 +11,19 @@ import UIKit
 import CoreImage
 
 class QRCodeGenerator {
-    static func qrCodeFromString(string: String) -> CIImage? {
+    static func qrCodeFromString(string: String) -> UIImage? {
         let stringData = string.data(using: String.Encoding.utf8)
-        let filter = CIFilter(name: "CIQRCodeGenerator")
-        filter?.setValue(stringData, forKey: "inputMessage")
-        filter?.setValue("H", forKey: "inputCorrectionLevel")
+        if let filter = CIFilter(name: "CIQRCodeGenerator") {
+            filter.setValue(stringData, forKey: "inputMessage")
+            filter.setValue("H", forKey: "inputCorrectionLevel")
+            let transform = CGAffineTransform(scaleX: 100, y: 100)
+            
+            if let output = filter.outputImage?.applying(transform) {
+                return UIImage(ciImage: output)
+            }
+        }
         
-        return filter?.outputImage
+        return nil
     }
 }
 

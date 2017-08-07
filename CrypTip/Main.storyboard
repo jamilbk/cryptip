@@ -1,208 +1,288 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="d5p-wa-3DS">
-  <device id="retina4_0" orientation="portrait">
-    <adaptation id="fullscreen"/>
-  </device>
-  <dependencies>
-    <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-    <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
-  </dependencies>
-  <scenes>
-    <!--CrypTip-->
-    <scene sceneID="tne-QT-ifu">
-      <objects>
-        <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-          <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Bill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JwQ-FL-T1z">
-                <rect key="frame" x="16" y="80" width="160" height="20"/>
-                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                <nil key="textColor"/>
-                <nil key="highlightedColor"/>
-              </label>
-              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="+$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="onX-Zd-8og">
-                <rect key="frame" x="144" y="182" width="160" height="21"/>
-                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                <nil key="textColor"/>
-                <nil key="highlightedColor"/>
-              </label>
-              <view contentMode="scaleToFill" misplaced="YES" id="gX3-cE-APm">
-                <rect key="frame" x="16" y="170" width="288" height="4"/>
-                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-              </view>
-              <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" id="p4W-tZ-9GJ">
-                <rect key="frame" x="241" y="76" width="63" height="30"/>
-                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                <nil key="textColor"/>
-                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                <connections>
-                  <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="uL5-2e-2b5"/>
-                </connections>
-              </textField>
-              <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="zkp-2V-75X">
-                <rect key="frame" x="109" y="127" width="195" height="29"/>
-                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                <segments>
-                  <segment title="18%"/>
-                  <segment title="20%"/>
-                  <segment title="25%"/>
-                </segments>
-                <connections>
-                  <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="hnD-Wv-U1G"/>
-                </connections>
-              </segmentedControl>
-              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="z85-q4-QjG">
-                <rect key="frame" x="203" y="211" width="101" height="20"/>
-                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                <nil key="textColor"/>
-                <nil key="highlightedColor"/>
-              </label>
-              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hPa-xk-Abu">
-                <rect key="frame" x="16" y="211" width="55" height="20"/>
-                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                <nil key="textColor"/>
-                <nil key="highlightedColor"/>
-              </label>
-              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VpI-HB-jsv">
-                <rect key="frame" x="16" y="134" width="25" height="21"/>
-                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                <nil key="textColor"/>
-                <nil key="highlightedColor"/>
-              </label>
-              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m7Z-yb-Zls">
-                <rect key="frame" x="228" y="80" width="11" height="21"/>
-                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                <nil key="textColor"/>
-                <nil key="highlightedColor"/>
-              </label>
-            </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <gestureRecognizers/>
-            <connections>
-              <outletCollection property="gestureRecognizers" destination="6xv-M0-F6A" appends="YES" id="wNd-Ga-Inh"/>
-            </connections>
-          </view>
-          <navigationItem key="navigationItem" title="CrypTip" id="fRT-5e-PbO">
-            <barButtonItem key="rightBarButtonItem" title="Settings" id="nul-6x-L6W">
-              <connections>
-                <segue destination="DOu-g0-MLM" kind="push" id="adV-Zv-y4T"/>
-              </connections>
-            </barButtonItem>
-          </navigationItem>
-          <connections>
-            <outlet property="billField" destination="p4W-tZ-9GJ" id="ffO-Fj-7zu"/>
-            <outlet property="tipControl" destination="zkp-2V-75X" id="rVW-wg-GPp"/>
-            <outlet property="tipLabel" destination="onX-Zd-8og" id="G50-64-bvG"/>
-            <outlet property="totalLabel" destination="z85-q4-QjG" id="q4Z-XO-q4A"/>
-          </connections>
-        </viewController>
-        <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-        <tapGestureRecognizer id="6xv-M0-F6A">
-          <connections>
-            <action selector="onTap:" destination="BYZ-38-t0r" id="yF9-Ju-4dK"/>
-          </connections>
-        </tapGestureRecognizer>
-      </objects>
-      <point key="canvasLocation" x="605" y="137"/>
-    </scene>
-    <!--Settings View Controller-->
-    <scene sceneID="poV-OM-Isd">
-      <objects>
-        <viewController id="DOu-g0-MLM" customClass="SettingsViewController" customModule="CrypTip" customModuleProvider="target" sceneMemberID="viewController">
-          <view key="view" contentMode="scaleToFill" id="EQj-8P-4iA">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Default Tip Percentage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RrK-vd-e6m">
-                <rect key="frame" x="16" y="85" width="176" height="21"/>
-                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                <nil key="textColor"/>
-                <nil key="highlightedColor"/>
-              </label>
-              <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="hb1-Ep-Zz9">
-                <rect key="frame" x="16" y="114" width="288" height="29"/>
-                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                <segments>
-                  <segment title="18%"/>
-                  <segment title="20%"/>
-                  <segment title="25%"/>
-                </segments>
-                <connections>
-                  <action selector="defaultTipChanged:" destination="DOu-g0-MLM" eventType="valueChanged" id="Sq6-5d-ACL"/>
-                </connections>
-              </segmentedControl>
-              <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="0Kq-0d-8vc">
-                <rect key="frame" x="16" y="211" width="288" height="30"/>
-                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                <nil key="textColor"/>
-                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                <textInputTraits key="textInputTraits"/>
-                <connections>
-                  <action selector="bitcoinAddressChanged:" destination="DOu-g0-MLM" eventType="editingDidEnd" id="ymK-Ik-Wxl"/>
-                </connections>
-              </textField>
-              <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Bitcoin Receive Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7No-3f-i2t">
-                <rect key="frame" x="16" y="182" width="184" height="21"/>
-                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                <nil key="textColor"/>
-                <nil key="highlightedColor"/>
-              </label>
-            </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-            <gestureRecognizers/>
-            <connections>
-              <outletCollection property="gestureRecognizers" destination="esz-N7-o96" appends="YES" id="f7H-JI-XXw"/>
-            </connections>
-          </view>
-          <navigationItem key="navigationItem" id="Tw9-Wa-Mne"/>
-          <connections>
-            <outlet property="bitcoinAddressField" destination="0Kq-0d-8vc" id="x5m-1a-pTs"/>
-            <outlet property="defaultTipControl" destination="hb1-Ep-Zz9" id="SWc-Qe-uog"/>
-          </connections>
-        </viewController>
-        <placeholder placeholderIdentifier="IBFirstResponder" id="7y0-jh-NW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-        <tapGestureRecognizer id="esz-N7-o96">
-          <connections>
-            <action selector="onTap:" destination="DOu-g0-MLM" id="AOz-Hq-Hor"/>
-          </connections>
-        </tapGestureRecognizer>
-      </objects>
-      <point key="canvasLocation" x="964" y="137"/>
-    </scene>
-    <!--Navigation Controller-->
-    <scene sceneID="RMI-yu-mZ9">
-      <objects>
-        <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d5p-wa-3DS" sceneMemberID="viewController">
-          <toolbarItems/>
-          <navigationBar key="navigationBar" contentMode="scaleToFill" id="C4C-Lr-zsk">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-            <autoresizingMask key="autoresizingMask"/>
-          </navigationBar>
-          <nil name="viewControllers"/>
-          <connections>
-            <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ZN9-aJ-WRf"/>
-          </connections>
-        </navigationController>
-        <placeholder placeholderIdentifier="IBFirstResponder" id="nps-hL-Ld6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-      </objects>
-      <point key="canvasLocation" x="73" y="137"/>
-    </scene>
-  </scenes>
-  <simulatedMetricsContainer key="defaultSimulatedMetrics">
-    <simulatedStatusBarMetrics key="statusBar"/>
-    <simulatedOrientationMetrics key="orientation"/>
-    <simulatedScreenMetrics key="destination" type="retina4_0.fullscreen"/>
-  </simulatedMetricsContainer>
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CrypTip-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CrypTip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Bill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JwQ-FL-T1z">
+                                <rect key="frame" x="16" y="86" width="160" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="+$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="onX-Zd-8og">
+                                <rect key="frame" x="144" y="241" width="160" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" misplaced="YES" id="gX3-cE-APm">
+                                <rect key="frame" x="16" y="229" width="288" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" id="p4W-tZ-9GJ">
+                                <rect key="frame" x="241" y="76" width="63" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="uL5-2e-2b5"/>
+                                    <action selector="renderQRCode:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Pb6-nx-gSh"/>
+                                </connections>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="zkp-2V-75X">
+                                <rect key="frame" x="109" y="127" width="195" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="15%"/>
+                                    <segment title="18%"/>
+                                    <segment title="20%"/>
+                                    <segment title="25%"/>
+                                </segments>
+                                <connections>
+                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="hnD-Wv-U1G"/>
+                                    <action selector="renderQRCode:" destination="BYZ-38-t0r" eventType="valueChanged" id="6bd-gH-Sge"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="z85-q4-QjG">
+                                <rect key="frame" x="203" y="270" width="101" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hPa-xk-Abu">
+                                <rect key="frame" x="16" y="270" width="55" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VpI-HB-jsv">
+                                <rect key="frame" x="16" y="134" width="25" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m7Z-yb-Zls">
+                                <rect key="frame" x="228" y="80" width="11" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minimumValue="1" maximumValue="100" id="jRX-KP-P9n">
+                                <rect key="frame" x="210" y="174" width="94" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="GRh-Ht-ut1"/>
+                                    <action selector="partySizeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="LPW-hb-mrd"/>
+                                    <action selector="renderQRCode:" destination="BYZ-38-t0r" eventType="valueChanged" id="fyu-gs-MPq"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Party Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5cL-kU-hjA">
+                                <rect key="frame" x="16" y="178" width="77" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Per Person" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5hE-zu-RIM">
+                                <rect key="frame" x="16" y="298" width="84" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Y6g-Ia-faM">
+                                <rect key="frame" x="203" y="298" width="101" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2lZ-6i-9vu">
+                                <rect key="frame" x="165" y="178" width="37" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" misplaced="YES" id="vEL-qd-o21">
+                                <rect key="frame" x="16" y="327" width="288" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="kEs-if-pju">
+                                <rect key="frame" x="95" y="339" width="209" height="209"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="฿" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JNA-oz-TtD">
+                                <rect key="frame" x="34" y="415" width="49" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="51"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="6xv-M0-F6A" appends="YES" id="wNd-Ga-Inh"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="CrypTip" id="fRT-5e-PbO">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="nul-6x-L6W">
+                            <connections>
+                                <segue destination="DOu-g0-MLM" kind="push" id="adV-Zv-y4T"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="QRImage" destination="kEs-if-pju" id="TsF-dI-NxF"/>
+                        <outlet property="billField" destination="p4W-tZ-9GJ" id="ffO-Fj-7zu"/>
+                        <outlet property="partySize" destination="2lZ-6i-9vu" id="KaB-8J-0jN"/>
+                        <outlet property="partySizeStepper" destination="jRX-KP-P9n" id="0AM-AW-FH8"/>
+                        <outlet property="perPersonTotal" destination="Y6g-Ia-faM" id="91J-T4-hfx"/>
+                        <outlet property="tipControl" destination="zkp-2V-75X" id="rVW-wg-GPp"/>
+                        <outlet property="tipLabel" destination="onX-Zd-8og" id="G50-64-bvG"/>
+                        <outlet property="totalLabel" destination="z85-q4-QjG" id="q4Z-XO-q4A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="6xv-M0-F6A">
+                    <connections>
+                        <action selector="onTap:" destination="BYZ-38-t0r" id="yF9-Ju-4dK"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="605" y="137"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="poV-OM-Isd">
+            <objects>
+                <viewController id="DOu-g0-MLM" customClass="SettingsViewController" customModule="CrypTip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EQj-8P-4iA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Default Tip Percentage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RrK-vd-e6m">
+                                <rect key="frame" x="16" y="85" width="176" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="hb1-Ep-Zz9">
+                                <rect key="frame" x="16" y="114" width="288" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="15%"/>
+                                    <segment title="18%"/>
+                                    <segment title="20%"/>
+                                    <segment title="25%"/>
+                                </segments>
+                                <connections>
+                                    <action selector="defaultTipChanged:" destination="DOu-g0-MLM" eventType="valueChanged" id="Sq6-5d-ACL"/>
+                                </connections>
+                            </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="0Kq-0d-8vc">
+                                <rect key="frame" x="16" y="279" width="288" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="bitcoinAddressChanged:" destination="DOu-g0-MLM" eventType="editingDidEnd" id="ymK-Ik-Wxl"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Bitcoin Receive Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7No-3f-i2t">
+                                <rect key="frame" x="16" y="250" width="184" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Default Party Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9NX-eo-lL1">
+                                <rect key="frame" x="16" y="166" width="137" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="gvd-Xa-Sk3">
+                                <rect key="frame" x="16" y="195" width="53" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="defaultPartySizeChanged:" destination="DOu-g0-MLM" eventType="editingDidEnd" id="Flt-xM-jZQ"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="esz-N7-o96" appends="YES" id="f7H-JI-XXw"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="Tw9-Wa-Mne"/>
+                    <connections>
+                        <outlet property="bitcoinAddressField" destination="0Kq-0d-8vc" id="x5m-1a-pTs"/>
+                        <outlet property="defaultPartySizeField" destination="gvd-Xa-Sk3" id="joM-Ag-pmx"/>
+                        <outlet property="defaultTipControl" destination="hb1-Ep-Zz9" id="SWc-Qe-uog"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7y0-jh-NW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="esz-N7-o96">
+                    <connections>
+                        <action selector="onTap:" destination="DOu-g0-MLM" id="AOz-Hq-Hor"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="964" y="137"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RMI-yu-mZ9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d5p-wa-3DS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="C4C-Lr-zsk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ZN9-aJ-WRf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nps-hL-Ld6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73" y="137"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_0.fullscreen"/>
+    </simulatedMetricsContainer>
 </document>

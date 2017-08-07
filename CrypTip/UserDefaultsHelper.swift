@@ -39,7 +39,21 @@ class UserDefaultsHelper {
     static func loadBitcoinReceiveAddress() -> String {
         let defaults = UserDefaults.standard
         let address = defaults.string(forKey: "bitcoin_receive_address") ?? ""
-        print(address)
+        
         return address
+    }
+    
+    static func setDefaultPartySize(partySize: Int) {
+        let defaults = UserDefaults.standard
+        let sanitizedPartySize = partySize <= 0 ? 2 : partySize
+        defaults.set(sanitizedPartySize, forKey: "default_party_size")
+        defaults.synchronize()
+    }
+    
+    static func loadDefaultPartySize() -> Int {
+        let defaults = UserDefaults.standard
+        let partySize = defaults.integer(forKey: "default_party_size")
+        
+        return partySize <= 0 ? 2 : partySize
     }
 }

@@ -12,6 +12,7 @@ class SettingsViewController: UIViewController {
 
     @IBOutlet weak var defaultTipControl: UISegmentedControl!
     @IBOutlet weak var bitcoinAddressField: UITextField!
+    @IBOutlet weak var defaultPartySizeField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,12 @@ class SettingsViewController: UIViewController {
         let defaults = UserDefaultsHelper.loadTipPercentageDefault()
         defaultTipControl.selectedSegmentIndex = defaults.index
         bitcoinAddressField.text = UserDefaultsHelper.loadBitcoinReceiveAddress()
+        defaultPartySizeField.text = String(UserDefaultsHelper.loadDefaultPartySize())
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        // Ensure settings are saved if user hits Back without dismissing Keyboard
+        syncSettings()
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,11 +34,16 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func defaultTipChanged(_ sender: Any) {
-        let tipPercentages = [0.18, 0.2, 0.25]
+        let tipPercentages = [0.15, 0.18, 0.2, 0.25]
         let index = defaultTipControl.selectedSegmentIndex
         let defaultTipPercentage = tipPercentages[index]
         
         UserDefaultsHelper.setTipPercentageDefault(percentage: defaultTipPercentage, index: index)
+    }
+    
+    @IBAction func defaultPartySizeChanged(_ sender: Any) {
+        let partySize = Int(defaultPartySizeField.text!) ?? 2
+        UserDefaultsHelper.setDefaultPartySize(partySize: partySize)
     }
     
     @IBAction func onTap(_ sender: Any) {
@@ -42,13 +54,10 @@ class SettingsViewController: UIViewController {
         let address = bitcoinAddressField.text
         UserDefaultsHelper.setBitcoinReceiveAddress(address: address)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func syncSettings() {
+        defaultTipChanged(self)
+        defaultPartySizeChanged(self)
+        bitcoinAddressChanged(self)
     }
-    */
 }
