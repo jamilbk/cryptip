@@ -12,6 +12,7 @@
 		BE08C1D71F37D9C800F666AB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08C1D31F37D9C800F666AB /* SettingsViewController.swift */; };
 		BE08C1D81F37D9C800F666AB /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08C1D41F37D9C800F666AB /* UserDefaultsHelper.swift */; };
 		BE7289031F37EA8E00DFBDF6 /* BitcoinURIGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7289021F37EA8E00DFBDF6 /* BitcoinURIGenerator.swift */; };
+		BE7289051F38140700DFBDF6 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = BE7289041F38140700DFBDF6 /* README.md */; };
 		BE84B3451F37D907005E59AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE84B3441F37D907005E59AC /* AppDelegate.swift */; };
 		BE84B34C1F37D907005E59AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE84B34B1F37D907005E59AC /* Assets.xcassets */; };
 		BE84B3581F37D934005E59AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE84B3561F37D934005E59AC /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		BE08C1D31F37D9C800F666AB /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BE08C1D41F37D9C800F666AB /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		BE7289021F37EA8E00DFBDF6 /* BitcoinURIGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitcoinURIGenerator.swift; sourceTree = "<group>"; };
+		BE7289041F38140700DFBDF6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BE84B3411F37D907005E59AC /* CrypTip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrypTip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE84B3441F37D907005E59AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE84B34B1F37D907005E59AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 		BE84B3431F37D907005E59AC /* CrypTip */ = {
 			isa = PBXGroup;
 			children = (
+				BE7289041F38140700DFBDF6 /* README.md */,
 				BE08C1D11F37D9C800F666AB /* ViewController.swift */,
 				BE7289021F37EA8E00DFBDF6 /* BitcoinURIGenerator.swift */,
 				BE08C1D21F37D9C800F666AB /* QRCodeGenerator.swift */,
@@ -151,6 +154,7 @@
 				BE08C1D81F37D9C800F666AB /* UserDefaultsHelper.swift in Sources */,
 				BE7289031F37EA8E00DFBDF6 /* BitcoinURIGenerator.swift in Sources */,
 				BE08C1D51F37D9C800F666AB /* ViewController.swift in Sources */,
+				BE7289051F38140700DFBDF6 /* README.md in Sources */,
 				BE08C1D61F37D9C800F666AB /* QRCodeGenerator.swift in Sources */,
 				BE84B3451F37D907005E59AC /* AppDelegate.swift in Sources */,
 				BE08C1D71F37D9C800F666AB /* SettingsViewController.swift in Sources */,
