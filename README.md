@@ -4,7 +4,7 @@
 
 Submitted by: **Jamil Bou Kheir**
 
-Time spent: **8** hours spent in total
+Time spent: **12** hours spent in total
 
 ## User Stories
 
@@ -15,20 +15,22 @@ The following **required** functionality is complete:
 
 The following **optional** features are implemented:
 * [ ] UI animations
-* [ ] Remembering the bill amount across app restarts (if <10mins)
-* [ ] Using locale-specific currency and currency thousands separators.
-* [ ] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
+* [x] Remembering the bill amount across app restarts (if <10mins)
+* [x] Using locale-specific currency and currency thousands separators.
+* [x] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 
 The following **additional** features are implemented:
 
 * [x] Party size feature that splits the tip based on X people
 * [x] Generate a Bitcoin receive QR code when calculating split. This conforms to the [BIP21 standard](https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki) and allows anyone with a Bitcoin wallet or QR scanner to send the CrypTip user Bitcoin in the amount of the split bill. The Bitcoin exchange rate is hardcoded to $3,300 -- I didn't have time to play with fetching and parsing this, but looked into Foundation's JSON parsing support which seemed to do the trick.
+* [x] Reset UI button that resets the fields to their defaults from Settings
+* [x] Added 15% tip because, you know, sometimes you need it
 
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/k6KoBAq.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/PVCvr6t.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ## Project Analysis
 

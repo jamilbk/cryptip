@@ -16,6 +16,7 @@
 		BE84B34C1F37D907005E59AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE84B34B1F37D907005E59AC /* Assets.xcassets */; };
 		BE84B3581F37D934005E59AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE84B3561F37D934005E59AC /* Main.storyboard */; };
 		BE84B3591F37D934005E59AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE84B3571F37D934005E59AC /* LaunchScreen.storyboard */; };
+		BEE51EBD1F39300800798944 /* icons8-Edit File-50.png in Resources */ = {isa = PBXBuildFile; fileRef = BEE51EBC1F39300800798944 /* icons8-Edit File-50.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		BE84B3501F37D907005E59AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE84B3561F37D934005E59AC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BE84B3571F37D934005E59AC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BEE51EBC1F39300800798944 /* icons8-Edit File-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-Edit File-50.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		BE84B3431F37D907005E59AC /* CrypTip */ = {
 			isa = PBXGroup;
 			children = (
+				BEE51EBC1F39300800798944 /* icons8-Edit File-50.png */,
 				BE7289041F38140700DFBDF6 /* README.md */,
 				BE08C1D11F37D9C800F666AB /* CrypTipViewController.swift */,
 				BE7289021F37EA8E00DFBDF6 /* BitcoinURIGenerator.swift */,
@@ -140,6 +143,7 @@
 				BE84B34C1F37D907005E59AC /* Assets.xcassets in Resources */,
 				BE84B3591F37D934005E59AC /* LaunchScreen.storyboard in Resources */,
 				BE84B3581F37D934005E59AC /* Main.storyboard in Resources */,
+				BEE51EBD1F39300800798944 /* icons8-Edit File-50.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
